@@ -1,0 +1,16 @@
+┌───────────────────┐         ┌───────────────────┐         ┌───────────────────┐
+│     Users         │         │     Receipts      │         │      Brands       │
+├───────────────────┤         ├───────────────────┤         ├───────────────────┤
+│ _id (PK)         │◄──┐     │ _id (PK)         │         │ _id (PK)         │
+│ state            │   │     │ userId (FK)      │──┐      │ barcode          │
+│ createdDate      │   │     │ purchaseDate     │  │      │ brandCode        │
+│ lastLogin        │   │     │ totalSpent       │  │      │ category         │
+│ role             │   │     │ rewardsReceiptStatus │  │      │ categoryCode     │
+│ active           │   │     │ purchasedItemCount │  │      │ cpg              │
+│ signUpSource     │   │     │ pointsEarned     │  │      │ topBrand         │
+│                 │   │     │ bonusPointsEarned│  │      │ name             │
+└───────────────────┘   │     │ rewardsReceiptItemList │  │      └───────────────────┘
+                        │     └───────────────────┘  │
+                        │                             │
+                        │                             │
+                        └─────────────────────────────┘

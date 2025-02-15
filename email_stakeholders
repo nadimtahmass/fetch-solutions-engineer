@@ -1,0 +1,51 @@
+Subject: Data Quality Issues Identified in Fetch Rewards Data
+
+Hi John Appleseed,
+
+As part of our data quality assessment, we have identified several issues that could impact analytics and reporting. Below is a summary of our key findings:
+
+Key Data Quality Issues:
+1. Missing Data:
+	- Receipts:
+		- totalSpent is missing in 435 cases.
+		- purchaseDate is missing in 448 cases.
+		- rewardsReceiptItemList (list of purchased items) is missing in 440 cases.
+	- Users:
+		- state is missing in 56 records.
+		- lastLogin is missing in 62 records.
+	- Brands:
+		- categoryCode is missing in 650 records.
+		- topBrand flag is missing in 612 records.
+
+2. Duplicate Data:
+	- 283 duplicate user records were found, which could impact user-related reports.
+
+3. Referential Integrity Issues:
+	- 1,119 receipts reference non-existent users, meaning these transactions cannot be linked to a valid customer.
+
+4. Outliers in Total Spend:
+	- 55 receipts have unusually high transaction amounts (e.g., $4,721.95, $4,368.80, $4,566.17), suggesting potential anomalies or incorrect data entries.
+
+
+Impact on Business Insights:
+	- Missing totalSpent and purchaseDate values could distort revenue-based reports and time-based analyses.
+	- Missing rewardsReceiptItemList prevents accurate calculations of item-level sales trends.
+	- High outliers in totalSpent could lead to skewed insights in top-spending customers and brand performance reports.
+	- Duplicate users may cause inaccurate user behavior metrics.
+
+
+Next Steps & Recommendations:
+	- Data Cleaning: 
+		- Remove or correct missing values where possible, especially in key metrics like totalSpent and purchaseDate.
+	- Duplicate Handling: 
+		- Identify and merge duplicate users to prevent redundant data in reports.
+	- Investigate Outliers: 
+		- Confirm whether high total spend values are valid transactions or errors.
+	- User-Receipt Mapping: 
+		- Determine why over 1,100 receipts reference non-existent users and correct the issue.
+
+Would love to discuss these findings and determine priorities for fixing them. Let me know a good time to sync.
+
+Thanks,
+Nadim Tahmass
+Solutions Engineer
